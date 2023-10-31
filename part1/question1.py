@@ -14,22 +14,47 @@
 # Read the test suite to know the values that these functions should return.
 
 def get_city_temperature(city):
+   """
+   input: str 'city'
+   output: int 'degrees'
+
+   returns the degrees temperature according to the inputed city
+   """
+
+   # conditional statement to validate the inputed city and return the degrees
    if city == "Quito":
       return 22
-   if city == "Sao Paulo":
+   elif city == "Sao Paulo":
       return 17
-   if city == "San Francisco":
+   elif city == "San Francisco":
       return 16
+   elif city == "New York":
+      return 14
+
 
 def get_city_weather(city):
+   """
+   input: str 'city'
+   output: str 'weather of the city'
 
-  sky_condition = None
+   returns a text the with the city weather of the city inputed
+   """
 
-  if city == "Sao Paulo":
+   # initialize variable in None
+   sky_condition = None
+
+   # conditional statement to validate the inputed city and set sky_condition variable
+   if city == "Quito":
+     sky_condition = "sunny"
+   elif city == "Sao Paulo":
      sky_condition = "cloudy"
-  elif city == "New York":
+   elif city == "San Francisco":
+     sky_condition = "sunny"
+   elif city == "New York":
      sky_condition = "rainy"
 
-  temperature = get_city_temperature(city)
+   # call get_city_temperature in order to set 'temperature' variable
+   temperature = get_city_temperature(city)
 
-  return str(temperature) + " degrees and " + sky_condition
+   # return text with the city weather
+   return str(temperature) + " degrees and " + sky_condition

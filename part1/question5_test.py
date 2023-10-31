@@ -32,7 +32,7 @@ def create_favorite_foods(con):
   con.execute(sql_create_favorite_foods)
 
 def alter_people_animals_food(con):
-  con.executescript(sql_alter_tables_with_favorite_food);
+  con.executescript(sql_alter_tables_with_favorite_food)
 
 def update_people_animals_food(con):
   con.executemany("UPDATE people SET favorite_food_id = ? WHERE name = ?", PEOPLE_FOOD)
