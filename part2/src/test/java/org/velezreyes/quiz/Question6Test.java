@@ -44,6 +44,8 @@ public class Question6Test {
     assertEquals(drink.getName(), "ScottCola");
   }
 
+  // activate deactivated test 
+  @Test
   public void machineResets() throws Exception {
     VendingMachine vm = VendingMachineImpl.getInstance();
 
